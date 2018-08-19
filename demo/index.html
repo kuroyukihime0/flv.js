@@ -100,9 +100,10 @@
                 }
             }
             player = flvjs.createPlayer(mediaDataSource, {
-                enableWorker: false,
-                lazyLoadMaxDuration: 3 * 60,
                 seekType: 'range',
+                   enableWorker: true,
+          enableStashBuffer: false,
+          stashInitialSize: 128,
             });
             player.attachMediaElement(element);
             player.load();
